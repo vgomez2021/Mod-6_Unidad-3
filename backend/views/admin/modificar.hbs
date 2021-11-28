@@ -1,0 +1,63 @@
+<div class="container" style="margin: 100px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div align="center">
+                <h4>Modificar novedad</h4>
+            </div>
+            &nbsp;
+            &nbsp;
+            <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data" />
+            <input type="hidden" value="{{novedad.id}}" name="id">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Titulo" value="{{novedad.titulo}}" name="titulo">
+            </div>
+            &nbsp;
+            &nbsp;
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subtitulo" value="{{novedad.subtitulo}}"
+                    name="subtitulo">
+            </div>
+            &nbsp;
+            &nbsp;
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Descripcion" value="{{novedad.descripcion}}"
+                    name="descripcion">
+            </div>
+            &nbsp;
+            &nbsp;
+            <div class="form-group">
+                <input type="date" class="form-control" placeholder="Fecha" value="{{novedad.fecha}}"
+                    name="fecha">{{novedad.fecha}}</input>
+            </div>
+            &nbsp;
+            &nbsp;
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Lugar" value="{{novedad.lugar}}"
+                    name="lugar"></input>
+            </div>
+            &nbsp;
+            &nbsp;
+            <div class="form-group">
+                <input type="time" class="form-control" placeholder="Hora" value="{{novedad.hora}}" name="hora"></input>
+            </div>
+            &nbsp;
+            &nbsp;
+            <div class="form-group">
+                <p>
+                    <label>Imagen: <input type="file" name="imagen" id="imagen" /></label>
+                </p>
+                <p>
+                    <label><input type="checkbox" name="img_delete" id="img_delete" value="1">¿Desea eliminar la imagen
+                        actual?</label>
+                    <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                </p>
+            </div>
+            <div align="center">
+                &nbsp;
+                &nbsp;
+                <button type="submit" class="btn btn-dark">Modificar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
